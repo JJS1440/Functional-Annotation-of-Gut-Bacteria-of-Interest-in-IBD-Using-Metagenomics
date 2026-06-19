@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=trimming
-#SBATCH --output=/home/BITamonleon/JaumeJurado/Chron/Data/Outputs/Quality_Control/Trimmomatic/log/trimming_output_%j.out
-#SBATCH --error=/home/BITamonleon/JaumeJurado/Chron/Data/Outputs/Quality_Control/Trimmomatic/log/trimming_error_%j.err
+#SBATCH --output=/home/BITamonleon/JaumeJurado/TFG/Data/Outputs/Quality_Control/Trimmomatic/log/trimming_output_%j.out
+#SBATCH --error=/home/BITamonleon/JaumeJurado/TFG/Data/Outputs/Quality_Control/Trimmomatic/log/trimming_error_%j.err
 #SBATCH --cpus-per-task=3
 #SBATCH --partition=irbio01
 #SBATCH --array=0-27%14
@@ -15,9 +15,9 @@ source activate jaume_env
 
 ulimit -s unlimited
 
-INPUT_DIR="/home/BITamonleon/JaumeJurado/Chron/Data/Sequences/Decompressed"
-OUTPUT_DIR="/home/BITamonleon/JaumeJurado/Chron/Data/Outputs/Quality_Control/Trimmomatic/"
-ADAPTERS="/home/BITamonleon/JaumeJurado/Chron/Data/adapters.fa"
+INPUT_DIR="/home/BITamonleon/JaumeJurado/TFG/Data/Sequences/Decompressed"
+OUTPUT_DIR="/home/BITamonleon/JaumeJurado/TFG/Data/Outputs/Quality_Control/Trimmomatic/"
+ADAPTERS="/home/BITamonleon/JaumeJurado/TFG/Data/adapters.fa"
 
 FILES=($(find "$INPUT_DIR" -name "*_R1_001.fastq"))
 SAMPLE=${FILES[$SLURM_ARRAY_TASK_ID]}
