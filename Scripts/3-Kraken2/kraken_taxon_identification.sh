@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=fastqc
-#SBATCH --output=/home/BITamonleon/JaumeJurado/Chron/Data/Outputs/Kraken_analysis/logs/kraken_analysis_%j.out
-#SBATCH --error=/home/BITamonleon/JaumeJurado/Chron/Data/Outputs/Kraken_analysis/logs/kraken_analysis_%j.err
+#SBATCH --output=/home/BITamonleon/JaumeJurado/TFG/Data/Outputs/Kraken_analysis/logs/kraken_analysis_%j.out
+#SBATCH --error=/home/BITamonleon/JaumeJurado/TFG/Data/Outputs/Kraken_analysis/logs/kraken_analysis_%j.err
 #SBATCH --cpus-per-task=5
 #SBATCH --partition=irbio01
 #SBATCH --array=0-27%7
@@ -17,10 +17,10 @@ source activate jaume_env
 
 ulimit -s unlimited
 
-OUTPUT_DIR="/home/BITamonleon/JaumeJurado/Chron/Data/Outputs/Kraken_analysis"
-REPORT_DIR="/home/BITamonleon/JaumeJurado/Chron/Data/Outputs/Kraken_analysis/Reports"
-INPUT_DIR="/home/BITamonleon/JaumeJurado/Chron/Data/Outputs/Quality_Control/Trimmomatic"
-DB_DIR="/home/BITamonleon/JaumeJurado/Chron/Data/Outputs/Kraken_db"
+OUTPUT_DIR="/home/BITamonleon/JaumeJurado/TFG/Data/Outputs/Kraken_analysis"
+REPORT_DIR="/home/BITamonleon/JaumeJurado/TFG/Data/Outputs/Kraken_analysis/Reports"
+INPUT_DIR="/home/BITamonleon/JaumeJurado/TFG/Data/Outputs/Quality_Control/Trimmomatic"
+DB_DIR="/home/BITamonleon/JaumeJurado/TFG/Data/Outputs/Kraken_db"
 
 if [ -d "$OUTPUT_DIR" ]; then
     echo "The directory $OUTPUT_DIR already exists."
