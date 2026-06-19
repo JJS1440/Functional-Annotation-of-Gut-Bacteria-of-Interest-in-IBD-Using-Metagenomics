@@ -15,4 +15,4 @@ source activate jaume_env
 
 ulimit -s unlimited
 
-python3 /home/BITamonleon/JaumeJurado/Chron/Scripts/Run/Decompresser.py
+python3 /home/BITamonleon/JaumeJurado/TFG/Scripts/Run/Decompresser.py
