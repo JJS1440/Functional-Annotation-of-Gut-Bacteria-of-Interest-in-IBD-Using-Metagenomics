@@ -100,7 +100,7 @@ tax_ids = [28449, 39491, 1019, 33039, 46125, 1747, 1685, 1308, 495, 1655, 851,
 
 # Number of threads that will be used durin the primary filtering
 n_threads = 14
-'''
+
 # Getting the file names we want to scan
 files_to_scan = [f for f in os.listdir(input_directory) if f.endswith('.out')]
 
@@ -256,7 +256,7 @@ Parallel(n_jobs=n_threads)(
     )
 
 print("Finished tertiary filtering", flush=True)
-'''
+
 # -------------------------------------------------------
 
 def ill_healty_files_extractor(metadata):
