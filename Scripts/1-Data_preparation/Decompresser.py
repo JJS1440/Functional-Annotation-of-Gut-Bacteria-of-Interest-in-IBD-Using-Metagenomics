@@ -59,8 +59,8 @@ with open(file_names_path, "r") as f:
 n_jobs = 14
 file_chunks = chunk_list(filenames, n_jobs)
 
-input_path = "/home/BITamonleon/JaumeJurado/Chron/Data/Sequences/Compressed/"
-output_path = "/home/BITamonleon/JaumeJurado/Chron/Data/Sequences/Decompressed/"
+input_path = "/home/BITamonleon/JaumeJurado/TFG/Data/Sequences/Compressed/"
+output_path = "/home/BITamonleon/JaumeJurado/TFG/Data/Sequences/Decompressed/"
 
 logs_list = Parallel(n_jobs=n_jobs)(
     delayed(parallelization)(chunk, input_path, output_path) for chunk in file_chunks
