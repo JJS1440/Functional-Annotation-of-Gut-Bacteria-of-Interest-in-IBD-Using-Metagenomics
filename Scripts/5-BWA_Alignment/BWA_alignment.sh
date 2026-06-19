@@ -1,16 +1,16 @@
 #!/bin/bash
 #SBATCH --job-name=BWA
-#SBATCH --output=/home/BITamonleon/JaumeJurado/Chron/Data/Outputs/BWA/log/Alignment/BWA_Index_%j.out
-#SBATCH --error=/home/BITamonleon/JaumeJurado/Chron/Data/Outputs/BWA/log/Alignment/BWA_Index_%j.err
+#SBATCH --output=/home/BITamonleon/JaumeJurado/TFG/Data/Outputs/BWA/log/Alignment/BWA_Index_%j.out
+#SBATCH --error=/home/BITamonleon/JaumeJurado/TFG/Data/Outputs/BWA/log/Alignment/BWA_Index_%j.err
 #SBATCH --cpus-per-task=1
 #SBATCH --partition=irbio01
 #SBATCH --array=0-20
 
-OUTPUT_PATH="/home/BITamonleon/JaumeJurado/Chron/Data/Outputs/BWA/Alignment"
-INDEX_FILES="/home/BITamonleon/JaumeJurado/Chron/Data/Outputs/BWA/Index"
-REF_GENOME_PATH="/home/BITamonleon/JaumeJurado/Chron/Data/Outputs/Genome_retriver/Ref_genomes"
+OUTPUT_PATH="/home/BITamonleon/JaumeJurado/TFG/Data/Outputs/BWA/Alignment"
+INDEX_FILES="/home/BITamonleon/JaumeJurado/TFG/Data/Outputs/BWA/Index"
+REF_GENOME_PATH="/home/BITamonleon/JaumeJurado/TFG/Data/Outputs/Genome_retriver/Ref_genomes"
 
-FILES_2_ALIGN="/home/BITamonleon/JaumeJurado/Chron/Data/Outputs/Filterer/Step4"
+FILES_2_ALIGN="/home/BITamonleon/JaumeJurado/TFG/Data/Outputs/Filterer/Step4"
 
 . /etc/profile
 
